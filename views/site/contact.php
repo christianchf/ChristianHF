@@ -7,9 +7,17 @@
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 use yii\captcha\Captcha;
+use yii\web\View;
 
 $this->title = 'Contact';
 $this->params['breadcrumbs'][] = $this->title;
+
+$js = <<<EOT
+    window.onload = function(){
+        $('#opc3').addClass('actual');
+    }
+EOT;
+$this->registerJs($js, View::POS_END);
 ?>
 <div class="site-contact">
     <h1><?= Html::encode($this->title) ?></h1>

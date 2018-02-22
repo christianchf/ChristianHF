@@ -6,9 +6,17 @@
 
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
+use yii\web\View;
 
 $this->title = 'Login';
 $this->params['breadcrumbs'][] = $this->title;
+
+$js = <<<EOT
+    window.onload = function(){
+        $('#opc4').addClass('actual');
+    }
+EOT;
+$this->registerJs($js, View::POS_END);
 ?>
 <div class="site-login">
     <h1><?= Html::encode($this->title) ?></h1>

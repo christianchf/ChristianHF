@@ -5,6 +5,7 @@
 
 use app\widgets\Alert;
 use yii\helpers\Html;
+use yii\helpers\Url;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
@@ -20,44 +21,33 @@ AppAsset::register($this);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
-    <title><?= Html::encode($this->title) ?></title>
+    <title>ChrsitianHF</title>
     <?php $this->head() ?>
 </head>
 <body>
 <?php $this->beginBody() ?>
 
 <div class="wrap">
-    <?php
-    NavBar::begin([
-        'brandLabel' => Yii::$app->name,
-        'brandUrl' => Yii::$app->homeUrl,
-        'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
-        ],
-    ]);
-    echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
-        'items' => [
-            ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'About', 'url' => ['/site/about']],
-            ['label' => 'Contact', 'url' => ['/site/contact']],
-            ['label' => 'Mi CV', 'url' => ['/experiencias/index']],
-            Yii::$app->user->isGuest ? (
-                ['label' => 'Login', 'url' => ['/site/login']]
-            ) : (
-                '<li>'
-                . Html::beginForm(['/site/logout'], 'post')
-                . Html::submitButton(
-                    'Logout (' . Yii::$app->user->identity->nombre . ')',
-                    ['class' => 'btn btn-link logout']
-                )
-                . Html::endForm()
-                . '</li>'
-            )
-        ],
-    ]);
-    NavBar::end();
-    ?>
+    <nav>
+        <div>
+            <?= Html::a('CHRISTIANHF', Url::to(['/site/index'])) ?>
+        </div>
+        <div>
+            <ul>
+                <li><span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                    <?= Html::a('Inicio', Url::to(['/site/index']), ['id' => 'opc1']) ?></li>
+                <li><span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+                    <?= Html::a('Mi CV', Url::to(['/experiencias/index']), ['id' => 'opc2']) ?></li>
+                <li><span class="glyphicon glyphicon-send" aria-hidden="true"></span>
+                    <?= Html::a('Contacto', Url::to(['/site/contact']), ['id' => 'opc3']) ?></li>
+                <?php if (Yii::$app->user->isGuest) { ?>
+                    <li><?= Html::a('Login', Url::to(['/site/login']), ['id' => 'opc4']) ?></li>
+                <?php } else { ?>
+                    <li><a href="<?= Url::to(['/site/logout']) ?>" data-method="POST">Logout (<?= Yii::$app->user->identity->nombre ?>)</a></li>
+                <?php } ?>
+            </ul>
+        </div>
+    </nav>
 
     <div class="container">
         <?= Breadcrumbs::widget([
@@ -70,7 +60,7 @@ AppAsset::register($this);
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
+        <p class="pull-left">&copy; ChristianHF <?= date('Y') ?></p>
 
         <p class="pull-right"><?= Yii::powered() ?></p>
     </div>

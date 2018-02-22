@@ -2,7 +2,16 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'My Yii Application';
+use yii\web\View;
+
+$this->title = 'ChristianHF';
+
+$js = <<<EOT
+    window.onload = function(){
+        $('#opc1').addClass('actual');
+    }
+EOT;
+$this->registerJs($js, View::POS_END);
 ?>
 <div class="site-index">
 

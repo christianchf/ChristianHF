@@ -1,7 +1,69 @@
-html,
-body {
+html, body {
     height: 100%;
 }
+
+/****INICIO DE MENU****/
+
+nav {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    background: #253dda;
+    color: #FFFFFF;
+    border-bottom: 3px solid #0218ab;
+}
+
+nav div {
+    width: 50%;
+    padding: 5px;
+}
+nav div:first-child {
+    padding: 10px 0 0 0;
+}
+nav div:first-child a:hover {
+    text-decoration: none;
+}
+
+nav div a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+nav div a:hover {
+    color: #DDDDDD;
+}
+
+nav div:first-child a {
+    font-size: 25px;
+    font-weight: bold;
+    padding-left: 12%;
+}
+
+nav div:last-child ul {
+    list-style: none;
+    width: 100%;
+    margin: 10px 0;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+nav div:last-child ul li {
+    margin: 0 20px;
+}
+
+nav div:last-child ul li:last-child {
+    margin-right: 15%;
+}
+
+nav .actual {
+    text-decoration: underline;
+}
+
+/****FIN DE MENU****/
 
 .wrap {
     min-height: 100%;
@@ -10,7 +72,7 @@ body {
     padding: 0 0 60px;
 }
 
-.wrap > .container {
+.wrap>.container {
     padding: 70px 15px 20px;
 }
 
@@ -21,22 +83,13 @@ body {
     padding-top: 20px;
 }
 
-.jumbotron {
-    text-align: center;
-    background-color: transparent;
-}
-
-.jumbotron .btn {
-    font-size: 21px;
-    padding: 14px 24px;
-}
-
 .not-set {
     color: #c55;
     font-style: italic;
 }
 
 /* add sorting icons to gridview sort links */
+
 a.asc:after, a.desc:after {
     position: relative;
     top: 1px;
@@ -49,11 +102,13 @@ a.asc:after, a.desc:after {
 }
 
 a.asc:after {
-    content: /*"\e113"*/ "\e151";
+    content: /*"\e113"*/
+    "\e151";
 }
 
 a.desc:after {
-    content: /*"\e114"*/ "\e152";
+    content: /*"\e114"*/
+    "\e152";
 }
 
 .sort-numerical a.asc:after {
@@ -91,25 +146,25 @@ a.desc:after {
 }
 
 /* align the logout "link" (button in form) of the navbar */
-.nav li > form > button.logout {
+
+.nav li>form>button.logout {
     padding: 15px;
     border: none;
 }
 
 @media(max-width:767px) {
-    .nav li > form > button.logout {
-        display:block;
+    .nav li>form>button.logout {
+        display: block;
         text-align: left;
         width: 100%;
         padding: 10px 15px;
     }
 }
 
-.nav > li > form > button.logout:focus,
-.nav > li > form > button.logout:hover {
+.nav>li>form>button.logout:focus, .nav>li>form>button.logout:hover {
     text-decoration: none;
 }
 
-.nav > li > form > button.logout:focus {
+.nav>li>form>button.logout:focus {
     outline: none;
 }
