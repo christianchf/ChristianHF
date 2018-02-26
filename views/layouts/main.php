@@ -34,12 +34,12 @@ AppAsset::register($this);
         </div>
         <div>
             <ul>
-                <li><span class="glyphicon glyphicon-home" aria-hidden="true"></span>
-                    <?= Html::a('Inicio', Url::to(['/site/index']), ['id' => 'opc1']) ?></li>
-                <li><span class="glyphicon glyphicon-file" aria-hidden="true"></span>
-                    <?= Html::a('Mi CV', Url::to(['/experiencias/index']), ['id' => 'opc2']) ?></li>
-                <li><span class="glyphicon glyphicon-send" aria-hidden="true"></span>
-                    <?= Html::a('Contacto', Url::to(['/site/contact']), ['id' => 'opc3']) ?></li>
+                <li><?= Html::a('<span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                    Inicio', Url::to(['/site/index']), ['id' => 'opc1']) ?></li>
+                <li><?= Html::a('<span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+                    Mi CV', Url::to(['/experiencias/index']), ['id' => 'opc2']) ?></li>
+                <li><?= Html::a('<span class="glyphicon glyphicon-send" aria-hidden="true"></span>
+                    Contacto', Url::to(['/site/contact']), ['id' => 'opc3']) ?></li>
                 <?php if (Yii::$app->user->isGuest) { ?>
                     <li><?= Html::a('Login', Url::to(['/site/login']), ['id' => 'opc4']) ?></li>
                 <?php } else { ?>

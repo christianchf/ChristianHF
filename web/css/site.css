@@ -65,6 +65,16 @@ nav .actual {
 
 /****FIN DE MENU****/
 
+.btn-primary {
+    background: #253dda;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background: #0218ab;
+    color: #dddddd;
+}
+
 .wrap {
     min-height: 100%;
     height: auto;

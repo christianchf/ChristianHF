@@ -8,7 +8,7 @@ use yii\web\View;
 /* @var $searchModel app\models\ExperienciaSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Experiencias';
+$this->title = 'Mi CV';
 $this->params['breadcrumbs'][] = $this->title;
 
 $js = <<<EOT
@@ -21,11 +21,12 @@ $this->registerJs($js, View::POS_END);
 <div class="experiencia-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
-    <p>
-        <?= Html::a('Create Experiencia', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
+    <?php if (!Yii::$app->user->isGuest) { ?>
+        <p>
+            <?= Html::a('Añadir experiencia', ['create'], ['class' => 'btn btn-success']) ?>
+        </p>
+    <?php } ?>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -33,12 +34,11 @@ $this->registerJs($js, View::POS_END);
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
             'titulo',
             'tipo',
             'descripcion:ntext',
             'fecha_inicio',
-            //'fecha_fin',
+            'fecha_fin',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
