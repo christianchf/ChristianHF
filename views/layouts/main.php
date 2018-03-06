@@ -21,7 +21,7 @@ AppAsset::register($this);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
-    <title>ChrsitianHF</title>
+    <title>ChristianHF</title>
     <?php $this->head() ?>
 </head>
 <body>
@@ -37,12 +37,14 @@ AppAsset::register($this);
                 <li><?= Html::a('<span class="glyphicon glyphicon-home" aria-hidden="true"></span>
                     Inicio', Url::to(['/site/index']), ['id' => 'opc1']) ?></li>
                 <li><?= Html::a('<span class="glyphicon glyphicon-file" aria-hidden="true"></span>
-                    Mi CV', Url::to(['/experiencias/index']), ['id' => 'opc2']) ?></li>
+                    Mi CV', Url::to(['/experiencias/cv']), ['id' => 'opc2']) ?></li>
                 <li><?= Html::a('<span class="glyphicon glyphicon-send" aria-hidden="true"></span>
                     Contacto', Url::to(['/site/contact']), ['id' => 'opc3']) ?></li>
                 <?php if (Yii::$app->user->isGuest) { ?>
                     <li><?= Html::a('Login', Url::to(['/site/login']), ['id' => 'opc4']) ?></li>
                 <?php } else { ?>
+                    <li><?= Html::a('<span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                        Experiencias', Url::to(['/experiencias/index']), ['id' => 'opc5']) ?></li>
                     <li><a href="<?= Url::to(['/site/logout']) ?>" data-method="POST">Logout (<?= Yii::$app->user->identity->nombre ?>)</a></li>
                 <?php } ?>
             </ul>

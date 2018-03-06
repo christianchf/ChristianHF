@@ -19,7 +19,9 @@ class ExperienciaSearch extends Experiencia
     {
         return [
             [['id'], 'integer'],
-            [['titulo', 'tipo', 'descripcion', 'fecha_inicio', 'fecha_fin'], 'safe'],
+            [['titulo', 'entidad', 'tipo', 'descripcion', 'fecha_inicio', 'fecha_fin'], 'safe'],
+            [['fecha_inicio', 'fecha_fin'], 'date', 'format'=>'php:Y-m-d'],
+            [['fecha_inicio', 'fecha_fin'], 'default', 'value' => null],
         ];
     }
 
@@ -49,6 +51,18 @@ class ExperienciaSearch extends Experiencia
             'query' => $query,
         ]);
 
+        $dataProvider->setSort([
+            'defaultOrder' => ['fecha_inicio' => SORT_DESC],
+            'attributes' => [
+                'titulo',
+                'entidad',
+                'tipo',
+                'descripcion',
+                'fecha_inicio',
+                'fecha_fin',
+            ]
+        ]);
+
         $this->load($params);
 
         if (!$this->validate()) {
@@ -60,13 +74,14 @@ class ExperienciaSearch extends Experiencia
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
+            'fecha_inicio' => $this->fecha_inicio,
+            'fecha_fin' => $this->fecha_fin,
         ]);
 
         $query->andFilterWhere(['ilike', 'titulo', $this->titulo])
+            ->andFilterWhere(['ilike', 'entidad', $this->entidad])
             ->andFilterWhere(['ilike', 'tipo', $this->tipo])
-            ->andFilterWhere(['ilike', 'descripcion', $this->descripcion])
-            ->andFilterWhere(['ilike', 'fecha_inicio', $this->fecha_inicio])
-            ->andFilterWhere(['ilike', 'fecha_fin', $this->fecha_fin]);
+            ->andFilterWhere(['ilike', 'descripcion', $this->descripcion]);
 
         return $dataProvider;
     }

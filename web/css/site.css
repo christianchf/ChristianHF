@@ -15,12 +15,19 @@ nav {
 }
 
 nav div {
-    width: 50%;
+    /* width: 50%; */
     padding: 5px;
 }
+
 nav div:first-child {
+    width: 40%;
     padding: 10px 0 0 0;
 }
+
+nav div:last-child {
+    width: 60%;
+}
+
 nav div:first-child a:hover {
     text-decoration: none;
 }
@@ -52,7 +59,7 @@ nav div:last-child ul {
 }
 
 nav div:last-child ul li {
-    margin: 0 20px;
+    margin: 0 10px;
 }
 
 nav div:last-child ul li:last-child {

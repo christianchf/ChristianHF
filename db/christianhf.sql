@@ -13,7 +13,8 @@ create table experiencias (
     id           bigserial    constraint pk_experiencias primary key,
     titulo       varchar(150) not null,
     tipo         varchar(25)  not null,
+    entidad      varchar(150),
     descripcion  text,
-    fecha_inicio varchar(7)   not null,
-    fecha_fin    varchar(7)   not null
+    fecha_inicio date         not null,
+    fecha_fin    date         not null
 );

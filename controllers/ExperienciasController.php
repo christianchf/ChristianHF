@@ -9,6 +9,7 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
+use yii\helpers\ArrayHelper;
 
 /**
  * ExperienciasController implements the CRUD actions for Experiencia model.
@@ -32,12 +33,12 @@ class ExperienciasController extends Controller
                 'rules' => [
                     [
                         'allow' => true,
-                        'actions' => ['index'],
+                        'actions' => ['cv'],
                         'roles' => ['?'],
                     ],
                     [
                         'allow' => true,
-                        'actions' => ['create', 'delete', 'update', 'view', 'index'],
+                        'actions' => ['create', 'delete', 'update', 'view', 'index', 'cv'],
                         'roles' => ['@'],
                     ],
                 ],
@@ -53,8 +54,35 @@ class ExperienciasController extends Controller
     {
         $searchModel = new ExperienciaSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $tipos = [
+            'Formación académica' => 'Formación académica',
+            'Formación complementaria' => 'Formación complementaria',
+            'Experiencia profesional' => 'Experiencia profesional'
+        ];
+        $entidades = Experiencia::find()
+                        ->select('entidad')
+                        ->orderBy('entidad')
+                        ->asArray()->all();
+        $entidades = ArrayHelper::map($entidades, 'entidad', 'entidad');
 
         return $this->render('index', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+            'tipos' => $tipos,
+            'entidades' => $entidades,
+        ]);
+    }
+
+    /**
+     * Lists all Experiencia models.
+     * @return mixed
+     */
+    public function actionCv()
+    {
+        $searchModel = new ExperienciaSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+        return $this->render('cv', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
@@ -81,6 +109,11 @@ class ExperienciasController extends Controller
     public function actionCreate()
     {
         $model = new Experiencia();
+        $tipos = [
+            'Formación académica' => 'Formación académica',
+            'Formación complementaria' => 'Formación complementaria',
+            'Experiencia profesional' => 'Experiencia profesional'
+        ];
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -88,6 +121,7 @@ class ExperienciasController extends Controller
 
         return $this->render('create', [
             'model' => $model,
+            'tipos' => $tipos,
         ]);
     }
 
@@ -101,6 +135,11 @@ class ExperienciasController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+        $tipos = [
+            'Formación académica' => 'Formación académica',
+            'Formación complementaria' => 'Formación complementaria',
+            'Experiencia profesional' => 'Experiencia profesional'
+        ];
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -108,6 +147,7 @@ class ExperienciasController extends Controller
 
         return $this->render('update', [
             'model' => $model,
+            'tipos' => $tipos,
         ]);
     }
 
