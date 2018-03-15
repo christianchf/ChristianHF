@@ -53,7 +53,7 @@ use kartik\date\DatePicker;
     </div>
 
     <div class="form-group">
-        <?= Html::submitButton('Añadir', ['class' => 'btn btn-success']) ?>
+        <?= Html::submitButton($model->isNewRecord ? 'Añadir' : 'Modificar', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-warning']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

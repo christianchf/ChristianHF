@@ -3,6 +3,9 @@
 /* @var $this yii\web\View */
 
 use yii\web\View;
+use app\assets\IndexAsset;
+
+IndexAsset::register($this);
 
 $this->title = 'ChristianHF';
 
@@ -15,48 +18,85 @@ $this->registerJs($js, View::POS_END);
 ?>
 <div class="site-index">
 
-    <div class="jumbotron">
-        <h1>Congratulations!</h1>
+    <img src="/images/fondo_index.jpg" id="fondo_index" alt="Fondo">
 
-        <p class="lead">You have successfully created your Yii-powered application.</p>
-
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
-    </div>
+    <!-- <div class="holder">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div> -->
 
     <div class="body-content">
 
-        <div class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
+        <section>
+            <h2>Mis datos personales</h2>
+            <article>
+                <p>¡Hola! Soy Christian, desarrolador y diseñador web. En mi
+                profesional he realizado desde el diseño de la web de la fundación
+                de Sanlúcar de Barrameda Afa-Enalsa, asi como aplicaciones web
+                para el Excmo. Ayuntamiento de Sanlúcar de Bda.</p>
+                <p>Si quieres conocer con mas detalle mis experiencias profesionales
+                puedes verlas en esta web o en mi perfil de Linkedin (
+                <a href="https://www.linkedin.com/in/christianhidalgoferrero/" target="_blank">
+                Perfil de Linkedin</a>). También puedes visitar mi cuenta de GitHub (
+                <a href="https://github.com/christianchf/" target="_blank">
+                Perfil de Github</a>).</p>
+                <p>Puedes contactar conmigo a traves del formulario de contacto
+                de esta web o directamente desde mi email (<span>christianhf.chf@gmail.com</span>)
+                o mi número de telefono (<span>671346980</span>).</p>
+            </article>
+        </section>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
-            </div>
-        </div>
+        <section>
+            <h2>Mi trayectoria</h2>
+            <article class="raw">
+                <?php for ($i = 0; $i < count($experiencias); $i++) { ?>
+                    <?php if ($experiencias[$i]['tipo'] == 'Experiencia profesional') { ?>
+                        <div class="flip-container trabajo">
+                    <?php } elseif ($experiencias[$i]['tipo'] == 'Formación académica') { ?>
+                        <div class="flip-container orla">
+                    <?php } elseif ($experiencias[$i]['tipo'] == 'Formación complementaria') { ?>
+                        <div class="flip-container curso">
+                    <?php } ?>
+                            <div class="flipper">
+                                <div class="front">
+                                    <div class="arriba">
+                                        <?php if ($experiencias[$i]['tipo'] == 'Experiencia profesional') { ?>
+                                            <img src="/images/trabajo.jpg" alt="Icono trabajo">
+                                        <?php } elseif ($experiencias[$i]['tipo'] == 'Formación académica') { ?>
+                                            <img src="/images/orla.svg" alt="Icono orla">
+                                        <?php } elseif ($experiencias[$i]['tipo'] == 'Formación complementaria') { ?>
+                                            <img src="/images/curso.png" alt="Icono Curso">
+                                        <?php } ?>
+                                        <p class="negrita"><?= $experiencias[$i]['titulo'] ?></p>
+                                    </div>
+                                    <div class="abajo">
+                                        <p class="negrita"><?= $experiencias[$i]['entidad'] ?></p>
+                                        <p><?= Yii::$app->formatter->format($experiencias[$i]['fecha_inicio'], 'date') ?> -
+                                            <?= Yii::$app->formatter->format($experiencias[$i]['fecha_fin'], 'date') ?></p>
+                                    </div>
+                                </div>
+                                <div class="back">
+                                    <p <?= (strlen($experiencias[$i]['descripcion']) > 260) ? 'class="machica"' : '' ?>><?= $experiencias[$i]['descripcion'] ?></p>
+                                </div>
+                            </div>
+                        </div>
+                <?php } ?>
+            </article>
+        </section>
 
     </div>
 </div>
