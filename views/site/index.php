@@ -104,92 +104,164 @@ $this->registerJs($js, View::POS_END);
                 <div>
                     <img src="/images/bootstrap.png" alt="Logo Bootstrap">
                     <h4>Bootstrap</h4>
-                    <img src="/images/nivel_alto.svg" alt="Nivel alto">
+                    <div class="nivel alto">
+                        <div class="top"></div>
+                        <div class="middle"></div>
+                        <div class="bottom"></div>
+                    </div>
                 </div>
                 <div>
                     <img src="/images/css3.png" id="imgb" alt="Logo CSS3">
                     <h4>CSS3</h4>
-                    <img src="/images/nivel_alto.svg" alt="Nivel alto">
+                    <div class="nivel alto">
+                        <div class="top"></div>
+                        <div class="middle"></div>
+                        <div class="bottom"></div>
+                    </div>
                 </div>
                 <div>
                     <img src="/images/git.png" alt="Logo Git">
                     <h4>Git</h4>
-                    <img src="/images/nivel_alto.svg" alt="Nivel alto">
+                    <div class="nivel alto">
+                        <div class="top"></div>
+                        <div class="middle"></div>
+                        <div class="bottom"></div>
+                    </div>
                 </div>
                 <div>
                     <img src="/images/github.png" alt="Logo Github">
                     <h4>Github</h4>
-                    <img src="/images/nivel_alto.svg" alt="Nivel alto">
+                    <div class="nivel alto">
+                        <div class="top"></div>
+                        <div class="middle"></div>
+                        <div class="bottom"></div>
+                    </div>
                 </div>
                 <div>
                     <img src="/images/gitlab.png" alt="Logo Gitlab">
                     <h4>Gitlab</h4>
-                    <img src="/images/nivel_alto.svg" alt="Nivel alto">
+                    <div class="nivel alto">
+                        <div class="top"></div>
+                        <div class="middle"></div>
+                        <div class="bottom"></div>
+                    </div>
                 </div>
                 <div>
                     <img src="/images/HTML5.png" alt="Logo HTML5">
                     <h4>HTML5</h4>
-                    <img src="/images/nivel_alto.svg" alt="Nivel alto">
+                    <div class="nivel alto">
+                        <div class="top"></div>
+                        <div class="middle"></div>
+                        <div class="bottom"></div>
+                    </div>
                 </div>
                 <div>
                     <img src="/images/javascript.png" alt="Logo Javascript">
                     <h4>JavaScript</h4>
-                    <img src="/images/nivel_alto.svg" alt="Nivel alto">
+                    <div class="nivel alto">
+                        <div class="top"></div>
+                        <div class="middle"></div>
+                        <div class="bottom"></div>
+                    </div>
                 </div>
                 <div>
                     <img src="/images/jquery.png" alt="Logo jQuery">
                     <h4>jQuery</h4>
-                    <img src="/images/nivel_alto.svg" alt="Nivel alto">
+                    <div class="nivel alto">
+                        <div class="top"></div>
+                        <div class="middle"></div>
+                        <div class="bottom"></div>
+                    </div>
                 </div>
                 <div>
                     <img src="/images/php.png" alt="Logo PHP">
                     <h4>PHP</h4>
-                    <img src="/images/nivel_alto.svg" alt="Nivel alto">
+                    <div class="nivel alto">
+                        <div class="top"></div>
+                        <div class="middle"></div>
+                        <div class="bottom"></div>
+                    </div>
                 </div>
                 <div>
                     <img src="/images/postgresql.png" alt="Logo Postgresql">
                     <h4>Postgresql</h4>
-                    <img src="/images/nivel_alto.svg" alt="Nivel alto">
+                    <div class="nivel alto">
+                        <div class="top"></div>
+                        <div class="middle"></div>
+                        <div class="bottom"></div>
+                    </div>
                 </div>
                 <div>
                     <img src="/images/sql.png" alt="Logo SQL">
                     <h4>SQL</h4>
-                    <img src="/images/nivel_alto.svg" alt="Nivel alto">
+                    <div class="nivel alto">
+                        <div class="top"></div>
+                        <div class="middle"></div>
+                        <div class="bottom"></div>
+                    </div>
                 </div>
                 <div>
                     <img src="/images/yii2.png" alt="Logo Yii2">
                     <h4>Yii2 Framework</h4>
-                    <img src="/images/nivel_alto.svg" alt="Nivel alto">
+                    <div class="nivel alto">
+                        <div class="top"></div>
+                        <div class="middle"></div>
+                        <div class="bottom"></div>
+                    </div>
                 </div>
                 <div>
                     <img src="/images/dreamweaver.png" alt="Logo Dreamweaver">
                     <h4>Adobe Dreamweaver</h4>
-                    <img src="/images/nivel_medio.svg" alt="Nivel medio">
+                    <div class="nivel medio">
+                        <div class="top"></div>
+                        <div class="middle"></div>
+                        <div class="bottom"></div>
+                    </div>
                 </div>
                 <div>
                     <img src="/images/apache.png" alt="Logo Apache">
                     <h4>Apache</h4>
-                    <img src="/images/nivel_medio.svg" alt="Nivel medio">
+                    <div class="nivel medio">
+                        <div class="top"></div>
+                        <div class="middle"></div>
+                        <div class="bottom"></div>
+                    </div>
                 </div>
                 <div>
                     <img src="/images/java.png" alt="Logo Java">
                     <h4>Java</h4>
-                    <img src="/images/nivel_medio.svg" alt="Nivel medio">
+                    <div class="nivel medio">
+                        <div class="top"></div>
+                        <div class="middle"></div>
+                        <div class="bottom"></div>
+                    </div>
                 </div>
                 <div>
                     <img src="/images/ubuntu.png" alt="Logo Ubuntu">
                     <h4>Linux Ubuntu</h4>
-                    <img src="/images/nivel_medio.svg" alt="Nivel medio">
+                    <div class="nivel medio">
+                        <div class="top"></div>
+                        <div class="middle"></div>
+                        <div class="bottom"></div>
+                    </div>
                 </div>
                 <div>
                     <img src="/images/windows.png" alt="Logo Windows">
                     <h4>Windows</h4>
-                    <img src="/images/nivel_medio.svg" alt="Nivel medio">
+                    <div class="nivel medio">
+                        <div class="top"></div>
+                        <div class="middle"></div>
+                        <div class="bottom"></div>
+                    </div>
                 </div>
                 <div>
                     <img src="/images/photoshop.png" alt="Logo Photoshop">
                     <h4>Adobe Photoshop</h4>
-                    <img src="/images/nivel_bajo.svg" alt="Nivel bajo">
+                    <div class="nivel bajo">
+                        <div class="top"></div>
+                        <div class="middle"></div>
+                        <div class="bottom"></div>
+                    </div>
                 </div>
             </article>
         </section>

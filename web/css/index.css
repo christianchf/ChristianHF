@@ -131,7 +131,7 @@ section article p span {
     flex-wrap: wrap;
 }
 
-#conocimientos div {
+#conocimientos>div {
     display: flex;
     margin: 10px;
     height: 55px;
@@ -152,13 +152,34 @@ section article p span {
     border-radius: 10px;
 }
 
-#conocimientos img:last-of-type {
-    width: 15px;
-    height: 15px;
-    margin: 20px 10px;
-}
-
 #conocimientos div #imgb {
     width: 25px;
     height: 35px;
+}
+
+#conocimientos .nivel {
+    margin: 20px 10px;
+}
+
+#conocimientos .nivel div {
+    width: 15px;
+    height: 5px;
+    margin: 1px;
+    border-radius: 2px;
+    background: #aaaaaa;
+}
+
+#conocimientos .alto .top,
+#conocimientos .alto .middle,
+#conocimientos .alto .bottom {
+    background: #5cb73c;
+}
+
+#conocimientos .medio .middle,
+#conocimientos .medio .bottom {
+    background: #5cb73c;
+}
+
+#conocimientos .bajo .bottom {
+    background: #5cb73c;
 }
