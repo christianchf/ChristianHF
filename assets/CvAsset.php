@@ -7,7 +7,7 @@ use yii\web\AssetBundle;
 /**
  * Asset para la vista index principal.
  */
-class IndexAsset extends AssetBundle
+class CvAsset extends AssetBundle
 {
     /**
      * @var string El directorio que contiene los archivos de este asset.
@@ -21,7 +21,7 @@ class IndexAsset extends AssetBundle
      * @var array Los archivos css del asset.
      */
     public $css = [
-        '/css/index.css',
+        '/css/cv.css',
     ];
     /**
      * @var array Los archivos js del asset.

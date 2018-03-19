@@ -20,25 +20,6 @@ $this->registerJs($js, View::POS_END);
 
     <img src="/images/fondo_index.jpg" id="fondo_index" alt="Fondo">
 
-    <!-- <div class="holder">
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-    </div> -->
-
     <div class="body-content">
 
         <section>

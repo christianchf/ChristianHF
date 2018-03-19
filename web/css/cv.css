@@ -1,0 +1,104 @@
+h1 {
+    border: 3px solid #fcb345;
+    border-radius: 15px;
+    background: linear-gradient(#253dda, #0218ab);
+    color: #ffffff;
+    padding: 5px 10px;
+    box-shadow: 5px 5px 15px #808080;
+}
+
+section h3 {
+    width: 90%;
+    border: 2px solid #253dda;
+    border-radius: 10px;
+    background: linear-gradient(#fcb345, #f9a322);
+    padding: 5px 10px;
+    box-shadow: 2px 2px 10px #808080;
+}
+
+article {
+    border-bottom: 1px solid #fcb345;
+    width: 80%;
+    margin: 5px 15px;
+    display: flex;
+    font-weight: bold;
+}
+
+article div {
+    margin: 2px;
+}
+
+.descripcion {
+    width: 70%;
+    margin-top: 10px;
+    margin-left: 40px;
+    padding: 7px;
+    border: 1px solid #fcb345;
+    border-radius: 5px;
+    background: #ffcb7c;
+}
+
+.descripcion:before {
+    content:"";
+    width: 0;
+    height: 0;
+    position: absolute;
+    margin: -19px 0 0 20px;
+    border-bottom: 11px solid #fcb345;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+}
+
+article div:first-of-type {
+    margin-right: 4px;
+    width: 25%;
+    border-right: 1px solid #fcb345;
+    text-align: center;
+}
+
+article div:nth-of-type(2) {
+    width: 75%;
+}
+
+article div:last-of-type {
+    margin-left: 4px;
+    padding: 2px;
+}
+
+article .glyphicon {
+    color: #fff;
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+    margin: 4px;
+}
+
+article .glyphicon-plus {
+    background-color: #5bc0de;
+    border: 1px solid #46b8da;
+    border-radius: 3px;
+}
+
+article .glyphicon-minus {
+    background-color: #c9302c;
+    border: 1px solid #ac2925;
+    border-radius: 3px;
+}
+
+article .glyphicon-plus:hover {
+    background-color: #3eafd1;
+    border: 1px solid #33a3c4;
+}
+
+article .glyphicon-minus:hover {
+    background-color: #af1915;
+    border: 1px soliud #9a1a16;
+}
+
+.descripcion {
+    display: none;
+}
+
+article .glyphicon-minus {
+    display: none;
+}

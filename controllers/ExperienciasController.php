@@ -79,12 +79,23 @@ class ExperienciasController extends Controller
      */
     public function actionCv()
     {
-        $searchModel = new ExperienciaSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $formaciones = Experiencia::find()
+                        ->where(['tipo' => 'Formación académica'])
+                        ->orderBy('fecha_inicio desc')
+                        ->asArray()->all();
+        $profesionales = Experiencia::find()
+                          ->where(['tipo' => 'Experiencia profesional'])
+                          ->orderBy('fecha_inicio desc')
+                          ->asArray()->all();
+        $complementarias = Experiencia::find()
+                            ->where(['tipo' => 'Formación complementaria'])
+                            ->orderBy('fecha_inicio desc')
+                            ->asArray()->all();
 
         return $this->render('cv', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
+            'formaciones' => $formaciones,
+            'profesionales' => $profesionales,
+            'complementarias' => $complementarias,
         ]);
     }
 
