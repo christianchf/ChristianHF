@@ -27,6 +27,7 @@ class CvAsset extends AssetBundle
      * @var array Los archivos js del asset.
      */
     public $js = [
+        '/js/btnsCv.js',
     ];
     /**
      * @var array Las dependencias del asset.

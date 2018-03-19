@@ -13,24 +13,6 @@ CvAsset::register($this);
 
 $this->title = 'Mi CV';
 $this->params['breadcrumbs'][] = $this->title;
-
-$js = <<<EOT
-    window.onload = function(){
-        $('#opc2').addClass('actual');
-
-        $('.glyphicon-plus').on('click', function(){
-            $(this).hide();
-            $(this).next().show();
-            $(this).parent().parent().next().slideDown();
-        });
-        $('.glyphicon-minus').on('click', function(){
-            $(this).hide();
-            $(this).prev().show();
-            $(this).parent().parent().next().slideUp();
-        });
-    }
-EOT;
-$this->registerJs($js, View::POS_END);
 ?>
 <div class="experiencia-index">
 
