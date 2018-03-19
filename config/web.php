@@ -51,14 +51,22 @@ $config = [
             ],
         ],
         'db' => $db,
-        /*
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                'index' => 'site/index',
+                'cv' => 'experiencias/cv',
+                'contacto' => 'site/contact',
+                'login' => 'site/login',
+                'experiencias' => 'experiencias/index',
+                'experiencia/<id:\d+>' => 'experiencias/view',
+                'experiencia/modificar/<id:\d+>' => 'experiencias/update',
+                'experiencias/index/<page:\d+>/<per-page:\d+>' => 'experiencias/index',
+                'experiencias/index/<sort>' => 'experiencias/index',
             ],
         ],
-        */
+
     ],
     'modules' => [
         'gridview' =>  [

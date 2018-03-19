@@ -40,9 +40,7 @@ AppAsset::register($this);
                     Mi CV', Url::to(['/experiencias/cv']), ['id' => 'opc2', 'class' => 'opc']) ?></li>
                 <li><?= Html::a('<span class="glyphicon glyphicon-send" title="Contacto" aria-hidden="true"></span>
                     Contacto', Url::to(['/site/contact']), ['id' => 'opc3', 'class' => 'opc']) ?></li>
-                <?php if (Yii::$app->user->isGuest) { ?>
-                    <li><?= Html::a('Login', Url::to(['/site/login']), ['id' => 'opc4']) ?></li>
-                <?php } else { ?>
+                <?php if (!Yii::$app->user->isGuest) { ?>
                     <li><?= Html::a('<span class="glyphicon glyphicon-folder-open" title="Experiencias" aria-hidden="true"></span>
                         Experiencias', Url::to(['/experiencias/index']), ['id' => 'opc5', 'class' => 'opc']) ?></li>
                     <li><a href="<?= Url::to(['/site/logout']) ?>" data-method="POST">Logout (<?= Yii::$app->user->identity->nombre ?>)</a></li>
@@ -55,9 +53,7 @@ AppAsset::register($this);
                     ', Url::to(['/experiencias/cv']), ['id' => 'opc2', 'class' => 'opc']) ?></li>
                 <li><?= Html::a('<span class="glyphicon glyphicon-send" title="Contacto" aria-hidden="true"></span>
                     ', Url::to(['/site/contact']), ['id' => 'opc3', 'class' => 'opc']) ?></li>
-                <?php if (Yii::$app->user->isGuest) { ?>
-                    <li><?= Html::a('Login', Url::to(['/site/login']), ['id' => 'opc4']) ?></li>
-                <?php } else { ?>
+                <?php if (!Yii::$app->user->isGuest) { ?>
                     <li><?= Html::a('<span class="glyphicon glyphicon-folder-open" title="Experiencias" aria-hidden="true"></span>
                         ', Url::to(['/experiencias/index']), ['id' => 'opc5', 'class' => 'opc']) ?></li>
                     <li><a href="<?= Url::to(['/site/logout']) ?>" data-method="POST"><span class="glyphicon glyphicon-log-out" title="Logout" aria-hidden="true"></span></a></li>
