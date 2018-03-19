@@ -2,7 +2,7 @@ html, body {
     height: 100%;
 }
 
-/****INICIO DE MENU****/
+/****INICIO DE MENU***********************************/
 
 nav {
     width: 100%;
@@ -12,6 +12,10 @@ nav {
     background: #253dda;
     color: #FFFFFF;
     border-bottom: 3px solid #0218ab;
+}
+
+#menu2 {
+    display: none;
 }
 
 nav div {
@@ -70,7 +74,17 @@ nav .actual {
     text-decoration: underline;
 }
 
-/****FIN DE MENU****/
+@media screen and (max-width: 800px) {
+    #menu1 {
+        display: none;
+    }
+
+    #menu2 {
+        display: flex;
+    }
+}
+
+/****FIN DE MENU***********************************/
 
 .btn-primary {
     background: #253dda;
@@ -94,10 +108,14 @@ nav .actual {
 }
 
 .footer {
-    height: 60px;
-    background-color: #f5f5f5;
-    border-top: 1px solid #ddd;
+    color: #ffffff;
+    background-color: #253dda;
+    border-top: 3px solid #0218ab;
     padding-top: 20px;
+}
+
+.footer span {
+    font-weight: bold;
 }
 
 .not-set {
