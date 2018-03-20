@@ -25,7 +25,7 @@ $this->registerJs($js, View::POS_END);
         <section>
             <h2>Mis datos personales</h2>
             <article>
-                <p>¡Hola! Soy Christian, desarrolador y diseñador web. En mi
+                <p>¡Hola! Soy Christian, desarrolador y diseñador web. En mi carrera
                 profesional he realizado desde el diseño de la web de la fundación
                 de Sanlúcar de Barrameda Afa-Enalsa, asi como aplicaciones web
                 para el Excmo. Ayuntamiento de Sanlúcar de Bda.</p>
