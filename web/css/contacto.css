@@ -1,0 +1,18 @@
+h1 {
+    border: 3px solid #fcb345;
+    border-radius: 15px;
+    background: linear-gradient(#253dda, #0218ab);
+    color: #ffffff;
+    padding: 5px 10px;
+    box-shadow: 5px 5px 15px #808080;
+}
+
+div span {
+    font-weight: bold;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}

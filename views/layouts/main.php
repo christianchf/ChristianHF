@@ -20,6 +20,15 @@ AppAsset::register($this);
     <meta charset="<?= Yii::$app->charset ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="ChristianHF, christianhf.chf@gmail.com">
+    <meta name="description" content="ChristianHF es la web personal a modo de CV
+    del desarrollador y diseñador web Christian. En esta web se muestran mis
+    diferentes experiencias profesionales, así como las diferentes formaciones
+    adquiridas." />
+    <meta name="keywords" content="web, christianhf, christian, diseño, desarrollo,
+    diseño web, desarrollo web, programación, programación web, desarrollador, diseñador,
+    programador, desarrollador web, diseñador web, programador web, páginas web,
+    sitio web, tienda online, aplicación web" />
     <?= Html::csrfMetaTags() ?>
     <title>ChristianHF</title>
     <?php $this->head() ?>

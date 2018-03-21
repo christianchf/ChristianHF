@@ -23,10 +23,6 @@ section p {
     font-size: 15px;
 }
 
-section article p span {
-    font-weight: bold;
-}
-
 .raw {
     width: 100%;
     margin: auto;

@@ -8,6 +8,9 @@ use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 use yii\captcha\Captcha;
 use yii\web\View;
+use app\assets\ContactoAsset;
+
+ContactoAsset::register($this);
 
 $this->title = 'Contacto';
 $this->params['breadcrumbs'][] = $this->title;
@@ -30,12 +33,12 @@ $this->registerJs($js, View::POS_END);
 
     <?php else : ?>
 
-        <p>Puedes contactar conmigo a través de mi número de teléfono o
-        mediante el siguiente formulario de contacto.</p>
-        <p>Gracias.</p>
 
         <div class="row">
             <div class="col-lg-5">
+                <p>Puedes rellenar el siguiente formulario de contacto para realizarme
+                cualquier duda o sugerencia que quieras.</p>
+                <p>Gracias.</p>
 
                 <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>
 
@@ -53,6 +56,12 @@ $this->registerJs($js, View::POS_END);
 
                 <?php ActiveForm::end(); ?>
 
+            </div>
+
+            <div class="col-lg-5">
+                <p>También puedes contactar conmigo a través de mi email
+                (<span>christianhf.chf@gmail.com</span>) o a través de mi número de
+                teléfono (<span>671346980</span>).</p>
             </div>
         </div>
 
