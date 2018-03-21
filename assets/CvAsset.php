@@ -5,7 +5,7 @@ namespace app\assets;
 use yii\web\AssetBundle;
 
 /**
- * Asset para la vista index principal.
+ * Asset para la vista cv.
  */
 class CvAsset extends AssetBundle
 {
