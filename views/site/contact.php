@@ -34,8 +34,8 @@ $this->registerJs($js, View::POS_END);
     <?php else : ?>
 
 
-        <div class="row">
-            <div class="col-lg-5">
+        <div class="contenido">
+            <div class="izq">
                 <p>Puedes rellenar el siguiente formulario de contacto para realizarme
                 cualquier duda o sugerencia que quieras.</p>
                 <p>Gracias.</p>
@@ -55,10 +55,9 @@ $this->registerJs($js, View::POS_END);
                     </div>
 
                 <?php ActiveForm::end(); ?>
-
             </div>
 
-            <div class="col-lg-5">
+            <div class="der">
                 <p>También puedes contactar conmigo a través de mi email
                 (<span>christianhf.chf@gmail.com</span>) o a través de mi número de
                 teléfono (<span>671346980</span>).</p>

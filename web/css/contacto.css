@@ -11,8 +11,32 @@ div span {
     font-weight: bold;
 }
 
-.row {
+.contenido {
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
     display: flex;
     justify-content: space-between;
-    margin-top: 30px;
+}
+
+.izq {
+    width: 45%;
+}
+
+.der {
+    width: 45%;
+}
+
+@media screen and (max-width: 1000px) {
+    .contenido {
+        flex-direction: column;
+    }
+
+    .izq {
+        width: 100%;
+    }
+
+    .der {
+        width: 100%;
+    }
 }
