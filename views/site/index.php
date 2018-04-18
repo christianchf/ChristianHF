@@ -27,16 +27,20 @@ $this->registerJs($js, View::POS_END);
             <article itemprop="description">
                 <p>¡Hola! Soy <span class="negrita" itemprop="name" itemprop="founder">Christian</span>,
                  desarrollador y diseñador web. En mi carrera profesional he
-                realizado desde el diseño de la web de la fundación Afa-Enalsa,
-                de <span itemprop="address">Sanlúcar de Barrameda</span>, así
-                como aplicaciones web para el Excmo. Ayuntamiento de Sanlúcar de
-                 Bda.</p>
+                realizado desde el diseño de webs de entidades de <span itemprop="address">Sanlúcar
+                 de Barrameda</span>, como la fundación Afa-Enalsa, así como
+                aplicaciones web para el Excmo. Ayuntamiento de Sanlúcar de Bda.</p>
                 <p>Si quieres conocer con más detalle mis experiencias profesionales
                 puedes verlas en esta web o en mi perfil de Linkedin
                 (<a href="https://www.linkedin.com/in/christianhidalgoferrero/" itemprop="url" target="_blank">
                 Perfil de Linkedin</a>). También puedes visitar mi cuenta de GitHub
                 (<a href="https://github.com/christianchf/" itemprop="url" target="_blank">
                 Perfil de GitHub</a>).</p>
+                <p>Además, soy el autor del blog <span class="negrita">Aprende
+                desarrollo web</span>, un blog didáctico sobre los principales
+                conceptos del desarrollo web, HTML5 y CSS3. Si quieres echarle un
+                vistazo a mi blog puedes hacerlo <a href="https://aprendedesarrollo-web.blogspot.com.es/" itemprop="url" target="_blank">
+                aquí</a></p>
                 <p>Puedes contactar conmigo a través del formulario de contacto
                 de esta web o directamente desde mi email
                 (<span class="negrita" itemprop="email">christianhf.chf@gmail.com</span>)
@@ -214,7 +218,7 @@ $this->registerJs($js, View::POS_END);
                 <div>
                     <img src="/images/java.png" alt="Logo Java">
                     <h4>Java</h4>
-                    <div class="nivel medio">
+                    <div class="nivel bajo">
                         <div class="top"></div>
                         <div class="middle"></div>
                         <div class="bottom"></div>
