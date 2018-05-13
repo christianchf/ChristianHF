@@ -198,6 +198,15 @@ $this->registerJs($js, View::POS_END);
                     </div>
                 </div>
                 <div>
+                    <img src="/images/ajax.png" alt="Logo AJAX">
+                    <h4>AJAX</h4>
+                    <div class="nivel alto">
+                        <div class="top"></div>
+                        <div class="middle"></div>
+                        <div class="bottom"></div>
+                    </div>
+                </div>
+                <div>
                     <img src="/images/dreamweaver.png" alt="Logo Dreamweaver">
                     <h4>Adobe Dreamweaver</h4>
                     <div class="nivel medio">
